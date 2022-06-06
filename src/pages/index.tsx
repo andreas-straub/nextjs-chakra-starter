@@ -1,26 +1,27 @@
 import {
-  Link as ChakraLink,
-  Text,
+  Button,
   Code,
+  Link as ChakraLink,
   List,
   ListIcon,
   ListItem,
-} from '@chakra-ui/react'
-import { CheckCircleIcon, LinkIcon } from '@chakra-ui/icons'
+  Text,
+} from "@chakra-ui/react";
+import { CheckCircleIcon, LinkIcon } from "@chakra-ui/icons";
 
-import { Hero } from '../components/Hero'
-import { Container } from '../components/Container'
-import { Main } from '../components/Main'
-import { DarkModeSwitch } from '../components/DarkModeSwitch'
-import { CTA } from '../components/CTA'
-import { Footer } from '../components/Footer'
+import { Hero } from "@/components/Hero";
+import { Container } from "@/components/Container";
+import { Main } from "@/components/Main";
+import { DarkModeSwitch } from "@/components/DarkModeSwitch";
+import { CTA } from "@/components/CTA";
+import { Footer } from "@/components/Footer";
 
 const Index = () => (
   <Container height="100vh">
-    <Hero />
+    <Hero title="Evelan - Next.js TypeScript Test " />
     <Main>
       <Text color="text">
-        Example repository of <Code>Next.js</Code> + <Code>chakra-ui</Code> +{' '}
+        Test task for <Code>Next.js</Code> + <Code>chakra-ui</Code> +{" "}
         <Code>TypeScript</Code>.
       </Text>
 
@@ -43,14 +44,25 @@ const Index = () => (
           </ChakraLink>
         </ListItem>
       </List>
+
+      <Button
+        as={ChakraLink}
+        href="/task-description"
+        variant="solid"
+        colorScheme="purple"
+        rounded="button"
+        flexGrow={3}
+        mx={2}
+        width="full"
+      >
+        See task description
+      </Button>
     </Main>
 
     <DarkModeSwitch />
-    <Footer>
-      <Text>Next ❤️ Chakra</Text>
-    </Footer>
+    <Footer />
     <CTA />
   </Container>
-)
+);
 
-export default Index
+export default Index;
